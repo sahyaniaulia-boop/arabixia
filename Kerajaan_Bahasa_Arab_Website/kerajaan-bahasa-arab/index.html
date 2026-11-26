@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#172b3a">
+<meta name="description" content="Petualangan belajar Bahasa Arab: buka gerbang kerajaan, seberangi jembatan, dan selesaikan tantangan bahasa Arab.">
+<title>Kerajaan Bahasa Arab — Petualangan Belajar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sound-hint" id="soundHint">🔊 Suara aktif setelah kamu menekan tombol</div>
+<button class="sound-toggle" id="soundToggle" aria-label="Aktifkan atau matikan suara" title="Suara">🔊</button>
+
+<!-- INTRO / GATE -->
+<section class="screen intro-screen active" id="introScreen" aria-label="Gerbang kerajaan">
+  <div class="night-sky">
+    <span class="moon"></span><span class="star s1">✦</span><span class="star s2">✧</span><span class="star s3">✦</span><span class="star s4">✧</span>
+    <div class="cloud cloud-a"></div><div class="cloud cloud-b"></div>
+  </div>
+  <div class="intro-copy">
+    <div class="royal-kicker">✧ SEBUAH PETUALANGAN DIMULAI ✧</div>
+    <h1>Kerajaan<br><em>Bahasa Arab</em></h1>
+    <p>Konon, ada sebuah kerajaan ilmu yang menyimpan harta berupa kata-kata Arab. Beranikah kamu masuk dan menemukannya?</p>
+    <div class="instruction">Ketuk gerbang untuk membuka pintu kerajaan</div>
+  </div>
+  <div class="castle-scene" id="castleScene">
+    <div class="castle-back">
+      <div class="tower tower-left"><div class="roof"></div><div class="window">✦</div></div>
+      <div class="castle-main"><div class="roof-main"></div><div class="castle-window cw1"></div><div class="castle-window cw2"></div><div class="gate-frame"><div class="gate-door left-door"></div><div class="gate-door right-door"></div><div class="gate-glow"></div><div class="gate-arch">بَابُ الْمَعْرِفَةِ</div></div></div>
+      <div class="tower tower-right"><div class="roof"></div><div class="window">✦</div></div>
+      <div class="flag flag-left">☾</div><div class="flag flag-right">✧</div>
+    </div>
+    <div class="front-ground"></div>
+    <button class="gate-hit" id="openGate" aria-label="Buka pintu gerbang kerajaan"></button>
+    <div class="gate-caption">GERBANG KERAJAAN ILMU</div>
+  </div>
+  <div class="intro-bottom"><span>📜 Belajar • Bermain • Menjelajah</span><span>Bahasa Arab Kelas IV</span></div>
+</section>
+
+<!-- JOURNEY / BRIDGE -->
+<section class="screen journey-screen" id="journeyScreen" aria-label="Perjalanan menuju kerajaan">
+  <header class="journey-header">
+    <a class="mini-brand" href="#" aria-label="Kerajaan Bahasa Arab"><span>ك</span> Kerajaan Bahasa Arab</a>
+    <div class="journey-tools"><span class="progress-pill" id="progressPill">Perjalanan 1/3</span><button class="sound-inline" id="soundToggle2">♫ Suara</button></div>
+  </header>
+  <div class="journey-heading">
+    <span class="royal-kicker">SELAMAT DATANG, PENJELAJAH!</span>
+    <h2>Ikuti jalan menuju istana</h2>
+    <p>Kamu adalah seorang musafir yang membawa bekal ilmu. Seberangi jembatan dan temukan gerbang pengetahuan.</p>
+  </div>
+  <div class="journey-landscape">
+    <div class="far-hills"></div>
+    <div class="far-castle"><div class="fc-tower"></div><div class="fc-body"><span>✦</span></div><div class="fc-tower right"></div></div>
+    <div class="river">
+      <div class="water-line w1"></div><div class="water-line w2"></div><div class="water-line w3"></div>
+      <div class="water-shine shine1"></div><div class="water-shine shine2"></div>
+      <span class="lily lily1">✿</span><span class="lily lily2">✿</span>
+    </div>
+    <div class="bridge">
+      <div class="bridge-rail rail-back"></div><div class="bridge-deck"></div>
+      <div class="bridge-planks"></div><div class="bridge-rail rail-front"></div>
+      <div class="bridge-post p1"></div><div class="bridge-post p2"></div><div class="bridge-post p3"></div><div class="bridge-post p4"></div>
+    </div>
+    <div class="path"></div>
+    <div class="traveler" id="traveler" aria-label="Tokoh musafir berjalan menuju kerajaan">
+      <div class="traveler-shadow"></div><div class="traveler-head"><div class="hair"></div><div class="face"><i></i><b></b><span></span></div></div>
+      <div class="traveler-body"><div class="scarf"></div><div class="satchel">📜</div></div>
+      <div class="traveler-leg leg-a"></div><div class="traveler-leg leg-b"></div>
+    </div>
+    <div class="signpost"><span>إِلَى الْقَصْرِ</span><small>MENUJU ISTANA</small></div>
+    <div class="land-bush bush1">✿</div><div class="land-bush bush2">❀</div><div class="land-bush bush3">✿</div>
+    <div class="bridge-label">JEMBATAN ILMU</div>
+  </div>
+  <div class="journey-bottom">
+    <div class="journey-tip"><span>🧭</span><div><b>Petunjuk perjalanan</b><small>Tekan tombol di bawah untuk berjalan menyeberangi jembatan.</small></div></div>
+    <button class="gold-btn" id="walkButton">Ayo menyeberang <span>→</span></button>
+  </div>
+</section>
+
+<!-- QUIZ GATE -->
+<section class="screen quiz-screen" id="quizScreen" aria-label="Tantangan penjaga gerbang">
+ <div class="quiz-sky"><span class="moon small-moon"></span><span class="star qs1">✦</span><span class="star qs2">✧</span></div>
+ <div class="quiz-wrap">
+  <div class="quiz-emblem">🛡️</div>
+  <span class="royal-kicker">PENJAGA GERBANG MENANTIMU</span>
+  <h2>Ujian masuk kerajaan</h2>
+  <p class="quiz-intro">Jawab pertanyaan Bahasa Arab dengan benar. Kumpulkan kunci untuk membuka gerbang istana!</p>
+  <div class="quiz-progress"><span id="quizCount">Pertanyaan 1 dari 5</span><div class="quiz-track"><i id="quizProgress"></i></div></div>
+  <article class="question-card">
+    <div class="question-category" id="questionCategory">KOSAKATA</div>
+    <div class="question-arabic" id="questionArabic" dir="rtl" lang="ar">مَدْرَسَةٌ</div>
+    <h3 id="questionText">Apa arti kata di atas?</h3>
+    <div class="answers" id="answers"></div>
+    <div class="answer-feedback" id="answerFeedback" aria-live="polite"></div>
+    <button class="gold-btn next-question" id="nextQuestion" disabled>Berikutnya <span>→</span></button>
+  </article>
+  <div class="key-count" id="keyCount">🗝️ Kunci terkumpul: 0</div>
+ </div>
+</section>
+
+<!-- KINGDOM HOME -->
+<section class="screen kingdom-screen" id="kingdomScreen" aria-label="Dalam kerajaan bahasa Arab">
+ <header class="kingdom-header">
+  <div class="mini-brand"><span>ك</span> Kerajaan Bahasa Arab</div>
+  <div class="kingdom-header-right"><span class="welcome-name" id="welcomeName">Penjelajah Hebat</span><button class="sound-inline" id="soundToggle3">♫ Suara</button></div>
+ </header>
+ <div class="kingdom-hero">
+  <div class="kingdom-copy">
+   <span class="royal-kicker">✧ MISI BERHASIL ✧</span>
+   <h1>Selamat datang<br>di <em>Kerajaan Ilmu!</em></h1>
+   <p>Gerbang telah terbuka. Sekarang, jelajahi ruang belajar dan kumpulkan harta berupa kosakata Bahasa Arab.</p>
+   <div class="treasure-badge">🗝️ <b id="finalKeys">5</b> kunci pengetahuan</div>
+  </div>
+  <div class="kingdom-illustration">
+   <div class="sun-halo"></div><div class="kingdom-castle"><div class="kc-tower left"></div><div class="kc-main"><div class="kc-roof"></div><div class="kc-door">ب</div><div class="kc-window one"></div><div class="kc-window two"></div></div><div class="kc-tower right"></div></div>
+   <div class="celebrate-star">✦</div><div class="celebrate-star two">✧</div><div class="treasure-chest">🧰</div>
+  </div>
+ </div>
+ <section class="learning-rooms">
+  <div class="rooms-heading"><div><span class="royal-kicker">PILIH RUANG BELAJAR</span><h2>Petualangan berikutnya</h2></div><span class="room-count">6 RUANG ILMU</span></div>
+  <div class="room-grid" id="roomGrid"></div>
+ </section>
+ <section class="inside-lesson" id="insideLesson">
+  <div class="lesson-placeholder"><span>📚</span><b>Pilih ruang ilmu untuk mulai belajar</b><small>Setiap ruang memiliki kosakata, contoh kalimat, dan misi menulis.</small></div>
+ </section>
+ <footer class="kingdom-footer">مَرْحَبًا بِكَ فِي مَمْلَكَةِ الْعِلْمِ <span>✦</span><small>Belajar Bahasa Arab menjadi petualangan yang menyenangkan.</small></footer>
+</section>
+
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
